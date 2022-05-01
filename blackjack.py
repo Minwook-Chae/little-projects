@@ -76,7 +76,7 @@ def main():
 
 def get_bet(max_bet):
     while True:
-        print(f"How much will you bet? (1 - {max_bet}, or QUIT)")
+        print(f"How much will you bet? (1 .. {max_bet}, or QUIT)")
         bet = input('> ').upper().strip()
         if bet == 'QUIT':
             print('Goodbye')
@@ -135,7 +135,7 @@ def display_hands(player_hand, dealer_hand, show_dealer_hand):
 def display_cards(hand):
     rows = ['', '', '', '', '']
 
-    for i, card in enumerate(hand):
+    for card in hand:
         rows[0] += ' ___  '
         if card == BACKSIDE:
             rows[1] += '|## | '
