@@ -3,8 +3,10 @@ import random, sys
 
 NUMBERS = {1: 'ICHI', 2: 'NI', 3: 'SAN', 
             4: 'SHI', 5: 'GO', 6: 'ROKU'}
+purse = 5000
 
-def main(purse=5000):
+def main():
+    global purse
     while True:
         print(f"You have {purse} mon.")
         print('Place your bet: ')
