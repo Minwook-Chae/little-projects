@@ -2,16 +2,17 @@ def main():
     while True:
         print('Get the nth index of fibbonacci')
         response = input('> ')
-        if response.isdecimal():
+        if response.isdecimal() and -1 < response.isdecimal():
             break
     print(fibbo(int(response)))
 
 
+# are the first two numbers in fibbo 0, 1 or 1, 1? 
 def fibbo(n, cache={0: 0, 1: 1}):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
+    if n == 0: 
+        return 0 
+    elif n == 1: 
+        return 1 
     elif n in cache:
         return cache[n]
     else:
