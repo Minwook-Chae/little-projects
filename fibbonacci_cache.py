@@ -8,12 +8,8 @@ def main():
 
 
 # are the first two numbers in fibbo 0, 1 or 1, 1? 
-def fibbo(n, cache={0: 0, 1: 1}):
-    if n == 0: 
-        return 0 
-    elif n == 1: 
-        return 1 
-    elif n in cache:
+def fibbo(n, cache={0: 0, 1: 1, 2: 1}):
+    if n in cache:
         return cache[n]
     else:
         cache[n] = fibbo(n - 1, cache) + fibbo(n - 2, cache)
